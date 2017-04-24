@@ -1,0 +1,95 @@
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">
+			Usuario <small>Testes dos WS</small>
+		</h1>
+	</div>
+</div>
+
+<div class="row">
+	<b>Insere Usuario</b>
+	<form name="usuarioForm" ng-submit="insere()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Nome</label> <input type="text"
+				ng-model="usuario.nome" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Email</label> <input type="text"
+				ng-model="usuario.email" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Senha</label> <input type="password"
+				ng-model="usuario.senha" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Cadastrar</button>
+		</div>
+	</form>
+</div>
+<div class="row">
+	<b>Edita Usuario</b>
+	<form name="usuarioForm2" ng-submit="edita()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Nome</label> <input type="text"
+				ng-model="usuario.nome" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Email</label> <input type="text"
+				ng-model="usuario.email" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Senha</label> <input type="password"
+				ng-model="usuario.senha" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Editar</button>
+		</div>
+	</form>
+</div>
+<div class="row">
+	<b>Consulta por email</b>
+	<form name="usuarioForm3" ng-submit="consultaPorEmail()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Email</label> <input type="text"
+				ng-model="usuario.email" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Consultar</button>
+		</div>
+	</form>
+</div>
+<div class="row">
+	<b>Consulta por Nome</b>
+	<form name="usuarioForm4" ng-submit="consultaPorNome()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Nome</label> <input type="text"
+				ng-model="usuario.nome" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Consultar</button>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<b>Usuários no sistema</b>
+	<form name="usuarioForm5" ng-submit="findAll()" novalidate>
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Find all</button>
+		</div>
+		<table class="table table-bordered table-hover">
+			<thead>
+				<th>E-mail</th>
+				<th>Name</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="user in users">
+					<td>{{user.email}}</td>
+					<td>{{user.name}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>

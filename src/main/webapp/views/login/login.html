@@ -1,0 +1,43 @@
+ <div class="row">
+     <div class="col-lg-12">
+         <h1 class="page-header">
+             Login <small>Testes dos WS</small>
+         </h1>
+         <ol class="breadcrumb">
+             <li class="active">
+                 <i class="fa fa-dashboard"></i> Dashboard
+             </li>
+         </ol>
+     </div>
+ </div>
+ 
+ <div class="row">
+ 	<b>Fazer logon</b>
+ 	<form name="loginForm" ng-submit="autenticar()" novalidate>
+	     <div class="form-group col-lg-2">
+		     <label class="control-label">Email</label>
+		     <input type="text" ng-model="login.email" class="form-control" >
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Senha</label>
+		     <input type="password" ng-model="login.senha" class="form-control">
+		</div>
+		
+		<div class="form-group col-lg-2">
+		     <button type="submit" class="btn btn-primary">Logar</button>
+		</div>
+	</form>
+</div>
+<div class="row">
+	<b>Esqueceu a senha</b>
+ 	<form name="loginForm" ng-submit="esqueciSenha()" novalidate>
+	     <div class="form-group col-lg-2">
+		     <label class="control-label">Email</label>
+		     <input type="text" ng-model="login.email" class="form-control" >
+		</div>
+		<div class="form-group col-lg-2">
+		     <button type="submit" class="btn btn-primary">Enviar</button>
+		</div>
+	</form>
+</div>
+     

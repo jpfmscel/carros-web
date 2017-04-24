@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="vetz.app">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Teste dos RestFulls</title>
+	</head>
+	<body ng-controller="LoginController">
+		<div style="text-align: center;">
+			<h2> Teste de conexão com o WebService</h2>
+		</div>
+		<br><br><br><br>
+		Resultado Autenticacao sem token: {{autenticado1}}
+		<br><br>
+		Resultado Autenticacao com token: {{autenticado2}}
+		<br><br>
+		<div>
+			<input type="button" onclick="window.location='../../index.html';" value="Voltar"/>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="../../app/js/angular/angular.min.js"></script>
+	<script type="text/javascript" src="../../app/js/app.js"></script>
+	<script type="text/javascript" src="../../app/js/login/login_controller.js"></script>
+	<script type="text/javascript" src="../../app/js/usuario/usuario_controller.js"></script>
+	<script type="text/javascript" src="../../app/js/service/constante_service.js"></script>
+
+</html>

@@ -1,0 +1,144 @@
+ <div class="row">
+     <div class="col-lg-12">
+         <h1 class="page-header">
+             Animal <small>Testes dos WS</small>
+         </h1>
+         <ol class="breadcrumb">
+             <li class="active">
+                 <i class="fa fa-dashboard"></i> Dashboard
+             </li>
+         </ol>
+     </div>
+ </div>
+ 
+ <div class="row">
+ 	<b>Seus Animais</b>
+ 	<table class="table table-bordered table-hover">
+ 		<thead>
+ 			<th>Nome</th>
+ 			<th>Raca</th>
+ 			<th>Data Nascimento</th>
+ 			<th>Genero</th>
+ 			<th>Peso</th>
+ 			<th>Cor</th>
+ 			<th>Especie</th>
+ 			<th colspan="3">Opcoes</th>
+ 		</thead>
+ 		<tbody>
+ 			<tr ng-repeat="animal in animais">
+ 				<td>{{animal.nome}}</td>
+ 				<td>{{animal.raca}}</td>
+ 				<td>{{animal.dataNascimento}}</td>
+ 				<td>{{animal.genero}}</td>
+ 				<td>{{animal.peso}}</td>
+ 				<td>{{animal.cor}}</td>
+ 				<td>{{animal.especie}}</td>
+ 				<td>
+ 					<a href="javascript:void(0)">
+ 						<label ng-click="consultaAnimal(animal.id)")>Editar</label>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:void(0)">
+ 						<label ng-click="removeAnimal(animal.id)")>Remover</label>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:void(0)">
+ 						<label ng-click="compartilha(animal.id)")>Compartilha</label>
+ 					</a>
+ 				</td>
+ 			</tr>
+ 		</tbody>
+ 	</table>
+</div>
+
+<div class="row">
+ 	<b>Compartilha Animal</b>
+ 	<form name="animalForm3" ng-submit="compartilha()" novalidate>
+	     <div class="form-group col-lg-2">
+		     <label class="control-label">Email</label>
+		     <input type="text" ng-model="emailCompartilha" class="form-control" >
+		 </div>
+		 <div class="form-group col-lg-2">
+			 {{animal.nome}}
+		 </div>
+	</form>
+</div>
+ 
+ <div class="row">
+ 	<b>Insere Animal</b>
+ 	<form name="animalForm1" ng-submit="insere()" novalidate>
+	     <div class="form-group col-lg-2">
+		     <label class="control-label">Nome</label>
+		     <input type="text" ng-model="animal.nome" class="form-control" >
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Raca</label>
+		     <input type="text" ng-model="animal.raca" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Data Nascimento</label>
+		     <input type="text" ng-model="animal.dataNascimento" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Genero</label>
+		     <input type="text" ng-model="animal.genero" class="form-control" maxlength="1">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Peso</label>
+		     <input type="text" ng-model="animal.peso" class="form-control" >
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Cor</label>
+		     <input type="text" ng-model="animal.cor" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Especie</label>
+		     <input type="text" ng-model="animal.especie" class="form-control">
+		</div>
+		
+		<div class="form-group col-lg-2">
+		     <button type="submit" class="btn btn-primary">Cadastrar</button>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+ 	<b>Edita Animal</b>
+ 	<form name="animalForm2" ng-submit="edita()" novalidate>
+	     <div class="form-group col-lg-2">
+		     <label class="control-label">Nome</label>
+		     <input type="text" ng-model="animal.nome" class="form-control" >
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Raca</label>
+		     <input type="text" ng-model="animal.raca" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Data Nascimento</label>
+		     <input type="text" ng-model="animal.dataNascimento" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Genero</label>
+		     <input type="text" ng-model="animal.genero" class="form-control" maxlength="1">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Peso</label>
+		     <input type="text" ng-model="animal.peso" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Cor</label>
+		     <input type="text" ng-model="animal.cor" class="form-control">
+		</div>
+		<div class="form-group col-lg-2">
+		     <label class="control-label">Especie</label>
+		     <input type="text" ng-model="animal.especie" class="form-control">
+		</div>
+		
+		<div class="form-group col-lg-2">
+		     <button type="submit" class="btn btn-primary">Editar</button>
+		</div>
+	</form>
+</div>
+     
