@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Carros</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
 
 </head>
 
-<body ng-app="vetz">
+<body ng-app="carros">
 
     <div id="wrapper">
 		<toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">{{vetzService.token}} SB Admin</a>
+                <a class="navbar-brand" href="index.html">{{carrosService.token}} SB Admin</a>
             </div>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -61,7 +61,7 @@
                         <a href="#usuario"><i class="fa fa-fw fa-bar-chart-o"></i> Usuario</a>
                     </li>
                     <li>
-                        <a href="#animal"><i class="fa fa-fw fa-bar-chart-o"></i> Animal</a>
+                        <a href="#pergunta"><i class="fa fa-fw fa-bar-chart-o"></i> Perguntas</a>
                     </li>
                 </ul>
             </div>
@@ -92,7 +92,7 @@
     <script src="app/app.js"></script>
     <script src="app/constantes/ParametroConst.js"></script>
     
-	<script src="app/service/VetzService.js"></script>
+	<script src="app/service/CarrosService.js"></script>
 	
     <script src="app/login/LoginWS.js"></script>
     <script src="app/login/LoginController.js"></script>
@@ -100,8 +100,8 @@
      <script src="app/usuario/UsuarioWS.js"></script>
      <script src="app/usuario/UsuarioController.js"></script>
      
-     <script src="app/animal/AnimalWS.js"></script>
-     <script src="app/animal/AnimalController.js"></script>
+     <script src="app/pergunta/PerguntaWS.js"></script>
+     <script src="app/pergunta/PerguntaController.js"></script>
 </body>
 
 </html>

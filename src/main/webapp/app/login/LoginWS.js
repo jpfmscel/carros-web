@@ -1,7 +1,7 @@
 (function(){
-	var app = angular.module('vetz');
+	var app = angular.module('carros');
 	
-	app.factory('vetz.LoginWS', [ '$http', 'vetz.ParametroConst' , function($http , ParametroConst) {
+	app.factory('carros.LoginWS', [ '$http', 'carros.ParametroConst' , function($http , ParametroConst) {
 		var URL = ParametroConst.url + 'login';
         var factory = { 
         	autenticar : function(login) {

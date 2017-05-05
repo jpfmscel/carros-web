@@ -1,11 +1,11 @@
 (function(){
-	var app = angular.module('vetz');
+	var app = angular.module('carros');
 	
-	app.controller('vetz.UsuarioController' , ['$scope' , 'vetz.VetzService' , 'vetz.UsuarioWS' , 'toaster' , 'vetz.ParametroConst' ,
-	    function($scope, VetzService , UsuarioWS, toaster , ParametroConst){
+	app.controller('carros.UsuarioController' , ['$scope' , 'carros.carrosService' , 'carros.UsuarioWS' , 'toaster' , 'carros.ParametroConst' ,
+	    function($scope, carrosService , UsuarioWS, toaster , ParametroConst){
 		
-		$scope.vetzService = VetzService;
-		$scope.usuario = {nome: '' , email: '' , senha : ''};
+		$scope.carrosService = carrosService;
+		$scope.usuario = {name: '' , email: '' , password : ''};
 			
 		$scope.insere = function() {
 			UsuarioWS.insere($scope.usuario).success(function(data){

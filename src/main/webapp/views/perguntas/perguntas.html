@@ -1,0 +1,98 @@
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">
+			Perguntas <small>Testes dos WS</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
+		</ol>
+	</div>
+</div>
+
+<div class="row">
+	<b>Todas Perguntas</b>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<th>Texto</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+			<th>Consultar pelo ID</th>
+			<th>Responder</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="pergunta in perguntas">
+				<td>{{pergunta.texto}}</td>
+				<td>{{pergunta.marcaCarro}}</td>
+				<td>{{pergunta.modeloCarro}}</td>
+				<td><a href="javascript:void(0)"> <label
+						ng-click="consultaPergunta(pergunta.id)" )>Consultar pelo ID</label>
+				</a></td>
+				<td><a href="javascript:void(0)"> <label
+						ng-click="responder(pergunta.id)" )>Responder</label>
+				</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="row">
+	<b>Insere pergunta</b>
+	<form name="perguntaForm1" ng-submit="insere()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">Pergunta</label> <input type="text"
+				ng-model="pergunta.texto" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<label class="control-label">Marca do Carro</label> <input
+				type="text" ng-model="pergunta.marcaCarro" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<label class="control-label">Modelo do Carro</label> <input
+				type="text" ng-model="pergunta.modeloCarro" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Cadastrar</button>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<b>Consulta perguntas</b>
+	<form name="perguntaForm1" ng-submit="findByEmail()" novalidate>
+		<div class="form-group col-lg-2">
+			<label class="control-label">E-mail</label> <input type="text"
+				ng-model="email" class="form-control">
+		</div>
+
+		<div class="form-group col-lg-2">
+			<button type="submit" class="btn btn-primary">Consultar</button>
+		</div>
+	</form>
+</div>
+
+<div class="row">
+	<b>Suas Perguntas</b>
+	<table class="table table-bordered table-hover">
+		<thead>
+			<th>Texto</th>
+			<th>Marca</th>
+			<th>Modelo</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="pergunta in perguntasUser">
+				<td>{{pergunta.texto}}</td>
+				<td>{{pergunta.marcaCarro}}</td>
+				<td>{{pergunta.modeloCarro}}</td>
+<!-- 				<td><a href="javascript:void(0)"> <label -->
+<!-- 						ng-click="removerPergunta(pergunta._id)" )>Remover</label> -->
+<!-- 				</a></td> -->
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+

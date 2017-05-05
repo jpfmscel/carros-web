@@ -1,15 +1,15 @@
 (function(){
-	var app = angular.module('vetz');
+	var app = angular.module('carros');
 	
-	app.controller('vetz.LoginController' , ['$scope' , 'vetz.LoginWS' , 'vetz.VetzService' , 'toaster' , 'vetz.ParametroConst' ,
-	    function($scope, LoginWS , VetzService , toaster , ParametroConst){
+	app.controller('carros.LoginController' , ['$scope' , 'carros.LoginWS' , 'carros.carrosService' , 'toaster' , 'carros.ParametroConst' ,
+	    function($scope, LoginWS , carrosService , toaster , ParametroConst){
 		
-		$scope.vetzService = VetzService;
+		$scope.carrosService = carrosService;
 		$scope.login = {email: 'thiagocarvalhobcc@gmail.com' , senha: '123'};
 		
 		$scope.autenticar = function() {
 			LoginWS.autenticar($scope.login).success(function(data){
-				$scope.vetzService.token = data;
+				$scope.carrosService.token = data;
 				var mensagem = 'Logado com sucesso token : '+ data;
 				toaster.pop(ParametroConst.toaster_sucesso, ParametroConst.toaster_titulo_sucesso, mensagem);
 			}).error(function(data, status, headers, config){
