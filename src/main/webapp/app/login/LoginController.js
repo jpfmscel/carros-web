@@ -5,10 +5,10 @@
 	    function($scope, LoginWS , carrosService , toaster , ParametroConst){
 		
 		$scope.carrosService = carrosService;
-		$scope.login = {email: 'thiagocarvalhobcc@gmail.com' , senha: '123'};
+		$scope.user = {email: '' , password: ''};
 		
 		$scope.autenticar = function() {
-			LoginWS.autenticar($scope.login).success(function(data){
+			LoginWS.autenticar($scope.user).success(function(data){
 				$scope.carrosService.token = data;
 				var mensagem = 'Logado com sucesso token : '+ data;
 				toaster.pop(ParametroConst.toaster_sucesso, ParametroConst.toaster_titulo_sucesso, mensagem);
