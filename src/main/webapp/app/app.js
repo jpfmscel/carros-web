@@ -20,6 +20,9 @@
 				}).when('/pergunta', {
 					templateUrl : 'views/perguntas/perguntas.html',
 					controller : 'carros.PerguntaController'
+				}).when('/consumo', {
+					templateUrl : 'views/consumo/consumo.html',
+					controller : 'carros.ConsumoController'
 				});
 
 			} ]);
